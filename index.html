@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pincode Finder</title>
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Font Awesome for icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1><i class="fas fa-map-marker-alt"></i> Pincode Finder</h1>
+      <p class="description">
+        Enter a 6-digit Indian pincode to find post office details
+      </p>
+
+      <div class="input-group">
+        <i class="fas fa-search input-icon"></i>
+        <input
+          type="text"
+          id="pincode"
+          oninput="limitLength(this)"
+          maxlength="6"
+          placeholder="Enter 6-digit pincode"
+        />
+        <button onclick="demo()" id="check-btn">
+          <i class="fas fa-search"></i> Check
+        </button>
+      </div>
+
+      <div class="loading" id="loading">
+        <div class="spinner"></div>
+        <p>Fetching pincode details...</p>
+      </div>
+
+      <div id="para"></div>
+    </div>
+
+    <footer>
+      <p>© 2023 Pincode Finder | Data provided by PostalPincode.in API</p>
+    </footer>
+
+    <!-- jQuery Library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="js/index.js"></script>
+  </body>
+</html>
